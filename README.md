@@ -7,7 +7,7 @@
  - Projektalapú megközelítés: Alkalmazd a tanultakat, és építs egy saját mobilalkalmazást a kurzus végére, amit akár a portfóliódban is megmutathatsz.
  - Közösségi tanulás: Csatlakozz egy olyan közösséghez, ahol a társaid és Én támogatlak a tanulás során.
 # Mit fogsz tanulni?
- - JavaScript Alapok: Változók, adattípusok, függvények, kontroll szerkezetek.
+ - JavaScript Alapok: Változók, adattípusok, függvények, kontroll szerkezetek. (https://www.w3schools.com/js/default.asp)
  - React Native Bevezetés: Alapok, komponensek, stílusok, navigáció.
  - Haladó Témák: Állapotkezelés, Context API, külső API-k integrálása.
  - App Fejlesztés: Tervezd meg és fejleszd le saját mobilalkalmazásodat a React Native segítségével.
