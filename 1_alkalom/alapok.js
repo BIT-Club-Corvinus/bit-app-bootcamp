@@ -14,6 +14,7 @@ const myFunction = function() { console.log("Hello, World!"); }; // Függvény
 const myDate = new Date(); // Dátum objektum
 const myRegExp = /ab+c/; // Reguláris kifejezés
 
+myArray[0] = 0
 // Operátorok
 let sum = 10 + 5; // Összeadás
 let difference = 20 - 5; // Kivonás
@@ -36,6 +37,7 @@ if (myNumber > 20) {
 } else {
     console.log("A szám kisebb, mint 20.");
 }
+
 
 // Ciklusok
 for (let i = 0; i < myArray.length; i++) {
