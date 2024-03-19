@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
+  const [text, setText] = useState("Plészholder")
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={[{color: '#fff'}]}>Sziasztok!</Text>
+      <TextInput style={styles.textInput} onChangeText={(value)=> setText(value)}></TextInput>
+      <TouchableOpacity style={styles.button} onPress={()=> Alert.alert('Megnyomtad a gombot')}>
+        <Text>{text}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -13,8 +18,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#12b0b0',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textInput: {
+    height: 50,
+    width: '100%',
+    backgroundColor: 'white'
+  },
+  button: {
+    backgroundColor: '#f69133',
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    margin: 16,
+    padding: 16
+  }
 });
