@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import supabase from './lib/supabase-client';
 
 export default function App() {
   const [text, setText] = useState("Plészholder")
