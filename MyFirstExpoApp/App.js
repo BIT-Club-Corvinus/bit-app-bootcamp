@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import supabase from './lib/supabase-client';
+import 'react-native-gesture-handler';
 
 const SessionContext = createContext(null)
 
