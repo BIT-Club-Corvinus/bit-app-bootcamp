@@ -7,7 +7,7 @@ const SessionContext = createContext(null)
 
 export default function App() {
   const [text, setText] = useState("Plészholder")
-  const [session, setSession] = useState(null)  
+  const [session, setSession] = useState(null)
 
   useEffect(() => {
     const subscription = supabase.auth.onAuthStateChange(
@@ -39,12 +39,26 @@ export default function App() {
     }
   }
 
+  async function register() {
+    try {
+      const { error } = await supabase.auth.signUp({
+        email: 'someone@email.com',
+        password: 'XgTyUQYismjnQfcDkUuf'
+      })
+      if (error) {
+        throw new error
+      }
+    } catch (error) {
+      Alert.alert(error.message)
+    }
+  }
+
   return (
     <SessionContext.Provider value={session}>
       <View style={styles.container}>
         <Text style={[{ color: '#fff' }]}>Sziasztok!</Text>
         <TextInput style={styles.textInput} onChangeText={(value) => setText(value)}></TextInput>
-        <TouchableOpacity style={styles.button} onPress={() => insertData(text)}>
+        <TouchableOpacity style={styles.button} onPress={() => register()}>
           <Text>{text}</Text>
         </TouchableOpacity>
       </View>
